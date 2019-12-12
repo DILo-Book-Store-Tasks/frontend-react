@@ -89,10 +89,27 @@
       box-shadow: 2px 1px 10px rgba(0,0,0,0.2);
     }
     .bg-resit-image{
-      background-image: url('../../images/banner1.png');
+      /* background-image: url('../../images/banner1.png'); */
+      margin-bottom:0;
+      margin-top: 86px;
       height: 296px;
       padding-right: 160px;
       padding-left: 460px;
+    }
+    .resit-judul-filter{
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 1px solid #17a2b8;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+    .resit-filter-bar{
+      margin-bottom: 20px;
+      padding: 5px 10px 10px 15px;
+      background-color: #50bdcf !important;
+      border-radius: 9px;
+      color: white;
+      font-weight: bold;
     }
     .resit-little-navbar{
       display: block;

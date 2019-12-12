@@ -28,20 +28,20 @@ const ResitHeader = props => {
                 </button>
                 <div className="collapse navbar-collapse navbar-resit" id="navbarSupportedContent">
                 <ul className="navbar-nav ml-auto topnav">
-                    <li className="nav-item active">
-                    <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                    <li className="nav-item">
+                        <NavLink to="/home" className="nav-link">Home</NavLink>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#">Buku</a>
+                        <NavLink to="/list-buku" className="nav-link">Buku</NavLink>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#">Tentang Kami</a>
+                        <NavLink to="/tentang-kami" className="nav-link">Tentang Kami</NavLink>
                     </li>
                     <li className="nav-item">
-                    <a href="pages/login.html" className="btn-resit btn-resit-login">Masuk</a>
+                        <NavLink to="/login" className="btn-resit btn-resit-login">Masuk</NavLink>
                     </li>
                     <li className="nav-item">
-                    <a href="pages/register.html" className="btn-resit btn-resit-register">Daftar</a>
+                        <NavLink to="/register" className="btn-resit btn-resit-register">Daftar</NavLink>
                     </li>
                 </ul>
                 </div>

@@ -11,7 +11,9 @@ const defaultProps = {};
 const ResitFooter = props => {
     const books = props.books
     return (
-      <h1>INI FOOTER</h1>
+  <div class="jumbotron text-center" style={{marginBottom:"0"}}>
+    <p>Footer</p>
+  </div>
     )
   }
   

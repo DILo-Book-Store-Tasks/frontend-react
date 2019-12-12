@@ -14,28 +14,25 @@ const ResitLayout = props => {
   return (
     <React.Fragment>
         <DefaultHeader />
-        <main className="main">
-            {/* <AppBreadCrumb appRoutes={routes} router={router}/> */}
-            <div className="kampret">
-              <Suspense fallback={loading()}>
+        <div style={{marginTop:"30px"}}>
+            <Suspense fallback={loading()}>
                 <Switch>
-                  {routes.map((route, idx) => {
+                    {routes.map((route, idx) => {
                     return route.component ? (
-                      <Route
+                        <Route
                         key={idx}
                         path={route.path}
                         exact={route.exact}
                         name={route.name}
                         render={props => (
-                          <route.component {...props} />
+                            <route.component {...props} />
                         )} />
                     ) : (null);
-                  })}
-                  <Redirect from="/" to="/home" />
+                    })}
+                    <Redirect from="/" to="/home" />
                 </Switch>
-              </Suspense>
-            </div>
-          </main>
+            </Suspense>
+          </div>
         <DefaultFooter />
     </React.Fragment>
     )

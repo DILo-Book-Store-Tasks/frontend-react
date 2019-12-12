@@ -4,11 +4,9 @@ import { HashRouter, Route, Switch, Link } from 'react-router-dom';
 // import './App.css';
 import "./assets/resitdc/css/resitdc.css";
 require('dotenv').config();
-const loading = () => <h1>Loading...</h1>;
+const loading = () => <center style={{marginTop:"250px"}}><h1>Loading...</h1></center>;
 
-// Containers
 const ResitLayout = React.lazy(() => import('./containers/ResitLayout'));
-
 const Login = React.lazy(() => import('./views/MultiPage/Login'));
 const Register = React.lazy(() => import('./views/MultiPage/Register'));
 class App extends Component {
