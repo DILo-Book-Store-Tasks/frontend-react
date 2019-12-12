@@ -3,6 +3,7 @@ import axios from 'axios'
 
 // import "./App.css";
 import "./assets/resitdc/css/resitdc.css";
+import NavBrand from './assets/images/logo.png';
 // import buku1 from './assets/images/produk/buku1.jpeg';
 // import buku2 from './assets/images/produk/buku2.jpg';
 // import buku3 from './assets/images/produk/buku3.jpg';
@@ -74,13 +75,7 @@ function App() {
     <form className="form-inline" id="book-search" action="/action_page.php">
       <input className="form-control mr-sm-2" id="input-search" type="search" placeholder="Cari buku" />
       <button className="btn btn-info" id="button-search" type="submit">
-      <FontAwesome
-        className='book'
-        name='book'
-        size='2x'
-        spin
-        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-      /> <i className="fa fa-search"></i></button>
+      <i className="fa fa-search"></i></button>
     </form>
     <a href="" className="resit-cart"><i className="fa fa-shopping-cart"></i> </a>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -135,137 +130,11 @@ function App() {
       <div className="col-12 text-center judul text-danger" style={{margin: "25px 0"}}>
         <i className="fa fa-fire"></i> Hot Books
       </div>
-<<<<<<< HEAD
-      <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-        <div className="resit-box-produk">
-          <div className="dropdown resit-box-dropdown show">
-            <a data-toggle="dropdown" href="#" aria-expanded="false">
-              <span className="fa fa-gear"></span>
-            </a>
-            <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-            </div>
-          </div>
-          <a href="#" target="_self">
-            <div className="resit-produk">
-              <div className="resit-foto" style={img_buku1}>
-              </div>
-              <div className="resit-nama-produk">Dilan 1990</div>
-              <div className="resit-harga-produk">
-                <span className="resit-harga">Rp. 220.000</span>
-              </div>
-              <div className="resit-produk-terjual"> Terjual : 52 </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-        <div className="resit-box-produk">
-          <div className="dropdown resit-box-dropdown show">
-            <a data-toggle="dropdown" href="#" aria-expanded="false">
-              <span className="fa fa-gear"></span>
-            </a>
-            <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-            </div>
-          </div>
-          <a href="#" target="_self">
-            <div className="resit-produk">
-              <div className="resit-foto" style={img_buku2}>
-              </div>
-              <div className="resit-nama-produk">Milea - Suara dari Dilan</div>
-              <div className="resit-harga-produk">
-                <span className="resit-harga">Rp. 250.000</span>
-              </div>
-              <div className="resit-produk-terjual"> Terjual : 52 </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-        <div className="resit-box-produk">
-          <div className="dropdown resit-box-dropdown show">
-            <a data-toggle="dropdown" href="#" aria-expanded="false">
-              <span className="fa fa-gear"></span>
-            </a>
-            <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-            </div>
-          </div>
-          <a href="#" target="_self">
-            <div className="resit-produk">
-              <div className="resit-foto" style={img_buku3}>
-              </div>
-              <div className="resit-nama-produk">One Piece Blue Deep</div>
-              <div className="resit-harga-produk">
-                <span className="resit-harga">Rp. 250.000</span>
-              </div>
-              <div className="resit-produk-terjual"> Terjual : 52 </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-        <div className="resit-box-produk">
-          <div className="dropdown resit-box-dropdown show">
-            <a data-toggle="dropdown" href="#" aria-expanded="false">
-              <span className="fa fa-gear"></span>
-            </a>
-            <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-            </div>
-          </div>
-          <a href="#" target="_self">
-            <div className="resit-produk">
-              <div className="resit-foto" style={img_buku4}>
-              </div>
-              <div className="resit-nama-produk">Bill Gates - Biacara Soal Restu, Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu</div>
-              <div className="resit-harga-produk">
-                <span className="resit-harga">Rp. 250.000</span>
-              </div>
-              <div className="resit-produk-terjual"> Terjual : 52 </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-        <div className="resit-box-produk">
-          <div className="dropdown resit-box-dropdown show">
-            <a data-toggle="dropdown" href="#" aria-expanded="false">
-              <span className="fa fa-gear"></span>
-            </a>
-            <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-            </div>
-          </div>
-          <a href="#" target="_self">
-            <div className="resit-produk">
-              <div className="resit-foto" style={img_buku1}>
-              </div>
-              <div className="resit-nama-produk">Dilan 1990</div>
-              <div className="resit-harga-produk">
-                <span className="resit-harga">Rp. 220.000</span>
-              </div>
-              <div className="resit-produk-terjual"> Terjual : 52 </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-        <div className="resit-box-produk">
-          <div className="dropdown resit-box-dropdown show">
-=======
       <Card todos={books}/>
 
       {/* <div class="col-lg-3 col-md-4 col-6 resit-master-box">
         <div class="resit-box-produk">
           <div class="dropdown resit-box-dropdown show">
->>>>>>> e1576675097cb4273a34d3ee63a3fe05fec7e61e
             <a data-toggle="dropdown" href="#" aria-expanded="false">
               <span className="fa fa-gear"></span>
             </a>
@@ -334,15 +203,9 @@ function App() {
             </div>
           </a>
         </div>
-<<<<<<< HEAD
-      </div>
-      <div className="col-12 text-center">
-        <button className="btn btn-warning">Kampret</button>
-=======
       </div> */}
       <div class="col-12 text-center">
         <button class="btn btn-warning">Kampret</button>
->>>>>>> e1576675097cb4273a34d3ee63a3fe05fec7e61e
       </div>
     </div>
   </div>
