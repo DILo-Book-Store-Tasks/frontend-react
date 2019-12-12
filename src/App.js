@@ -135,137 +135,11 @@ function App() {
       <div className="col-12 text-center judul text-danger" style={{margin: "25px 0"}}>
         <i className="fa fa-fire"></i> Hot Books
       </div>
-<<<<<<< HEAD
-      <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-        <div className="resit-box-produk">
-          <div className="dropdown resit-box-dropdown show">
-            <a data-toggle="dropdown" href="#" aria-expanded="false">
-              <span className="fa fa-gear"></span>
-            </a>
-            <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-            </div>
-          </div>
-          <a href="#" target="_self">
-            <div className="resit-produk">
-              <div className="resit-foto" style={img_buku1}>
-              </div>
-              <div className="resit-nama-produk">Dilan 1990</div>
-              <div className="resit-harga-produk">
-                <span className="resit-harga">Rp. 220.000</span>
-              </div>
-              <div className="resit-produk-terjual"> Terjual : 52 </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-        <div className="resit-box-produk">
-          <div className="dropdown resit-box-dropdown show">
-            <a data-toggle="dropdown" href="#" aria-expanded="false">
-              <span className="fa fa-gear"></span>
-            </a>
-            <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-            </div>
-          </div>
-          <a href="#" target="_self">
-            <div className="resit-produk">
-              <div className="resit-foto" style={img_buku2}>
-              </div>
-              <div className="resit-nama-produk">Milea - Suara dari Dilan</div>
-              <div className="resit-harga-produk">
-                <span className="resit-harga">Rp. 250.000</span>
-              </div>
-              <div className="resit-produk-terjual"> Terjual : 52 </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-        <div className="resit-box-produk">
-          <div className="dropdown resit-box-dropdown show">
-            <a data-toggle="dropdown" href="#" aria-expanded="false">
-              <span className="fa fa-gear"></span>
-            </a>
-            <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-            </div>
-          </div>
-          <a href="#" target="_self">
-            <div className="resit-produk">
-              <div className="resit-foto" style={img_buku3}>
-              </div>
-              <div className="resit-nama-produk">One Piece Blue Deep</div>
-              <div className="resit-harga-produk">
-                <span className="resit-harga">Rp. 250.000</span>
-              </div>
-              <div className="resit-produk-terjual"> Terjual : 52 </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-        <div className="resit-box-produk">
-          <div className="dropdown resit-box-dropdown show">
-            <a data-toggle="dropdown" href="#" aria-expanded="false">
-              <span className="fa fa-gear"></span>
-            </a>
-            <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-            </div>
-          </div>
-          <a href="#" target="_self">
-            <div className="resit-produk">
-              <div className="resit-foto" style={img_buku4}>
-              </div>
-              <div className="resit-nama-produk">Bill Gates - Biacara Soal Restu, Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu</div>
-              <div className="resit-harga-produk">
-                <span className="resit-harga">Rp. 250.000</span>
-              </div>
-              <div className="resit-produk-terjual"> Terjual : 52 </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-        <div className="resit-box-produk">
-          <div className="dropdown resit-box-dropdown show">
-            <a data-toggle="dropdown" href="#" aria-expanded="false">
-              <span className="fa fa-gear"></span>
-            </a>
-            <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-              <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-            </div>
-          </div>
-          <a href="#" target="_self">
-            <div className="resit-produk">
-              <div className="resit-foto" style={img_buku1}>
-              </div>
-              <div className="resit-nama-produk">Dilan 1990</div>
-              <div className="resit-harga-produk">
-                <span className="resit-harga">Rp. 220.000</span>
-              </div>
-              <div className="resit-produk-terjual"> Terjual : 52 </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-        <div className="resit-box-produk">
-          <div className="dropdown resit-box-dropdown show">
-=======
       <Card todos={books}/>
 
       {/* <div class="col-lg-3 col-md-4 col-6 resit-master-box">
         <div class="resit-box-produk">
           <div class="dropdown resit-box-dropdown show">
->>>>>>> e1576675097cb4273a34d3ee63a3fe05fec7e61e
             <a data-toggle="dropdown" href="#" aria-expanded="false">
               <span className="fa fa-gear"></span>
             </a>
@@ -334,15 +208,9 @@ function App() {
             </div>
           </a>
         </div>
-<<<<<<< HEAD
-      </div>
-      <div className="col-12 text-center">
-        <button className="btn btn-warning">Kampret</button>
-=======
       </div> */}
       <div class="col-12 text-center">
         <button class="btn btn-warning">Kampret</button>
->>>>>>> e1576675097cb4273a34d3ee63a3fe05fec7e61e
       </div>
     </div>
   </div>
