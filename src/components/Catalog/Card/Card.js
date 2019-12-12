@@ -1,13 +1,17 @@
 import React from 'react'
-import buku1 from '../../assets/images/produk/buku1.jpeg';
-var img_buku1 = {
-    backgroundImage: "url('" + { buku1 } + "')"
-};
+import '../Catalog.css'
+
+// import buku1 from '../assets/images/produk/buku1.jpeg';
+// var img_buku1 = {backgroundImage: "url('" + { buku1 } + "')"
+// let img_buku2 = () => {`"background-image: url('assets/images/produk/buku1.jpeg')`}
+//   style="background-image: url('assets/images/produk/buku1.jpeg');">
 
 const Card = props => {
   const books = props.books
   console.log(books)
 
+
+ 
 
   return (
     <div class="col-lg-3 col-md-4 col-6 resit-master-box">
@@ -23,7 +27,7 @@ const Card = props => {
         </div>
         <a href="#" target="_self">
             <div class="resit-produk">
-            <div class="resit-foto" style={img_buku1}>
+            <div class="resit-foto buku1" >
             </div>
             <div class="resit-nama-produk">Dilan 1990</div>
             <div class="resit-harga-produk">
