@@ -1,30 +1,33 @@
-import React, { Component } from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import FontAwesome from 'react-fontawesome';
+import React, { Component ,useEffect, useState } from 'react';
+import axios from 'axios'
+
 // import "./App.css";
 import "./assets/resitdc/css/resitdc.css";
-import "./components/Header";
-import buku1 from './assets/images/produk/buku1.jpeg';
-import buku2 from './assets/images/produk/buku2.jpg';
-import buku3 from './assets/images/produk/buku3.jpg';
-import buku4 from './assets/images/produk/buku4.jpg';
-import NavBrand from './assets/images/logo.png';
-import Header from "./components/Header";
-var img_buku1 = {
-	backgroundImage: "url('" + { buku1 } + "')"
-};
+// import buku1 from './assets/images/produk/buku1.jpeg';
+// import buku2 from './assets/images/produk/buku2.jpg';
+// import buku3 from './assets/images/produk/buku3.jpg';
+// import buku4 from './assets/images/produk/buku4.jpg';
+// import Header from "./components/Header";
 
-var img_buku2 = {
-	backgroundImage: "url('" + { buku2 } + "')"
-};
+import Card from "./components/Card/Card";
 
-var img_buku3 = {
-	backgroundImage: "url('" + { buku3 } + "')"
-};
+var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGVmNTM1OGZjMGM3NDM3NDZhOTE3YWMiLCJyb2xlIjoiNWRlZjRmZmE4YWZjY2YyZmUzMWY1NjRkIiwiaWF0IjoxNTc1OTY1NTI5fQ.J7l2nMqvHzT2AWFdWVqnuZ0xrcZIGQOQaYLI8JFokuk"
 
-var img_buku4 = {
-	backgroundImage: "url('" + { buku4 } + "')"
-};
+// var img_buku1 = {
+// 	backgroundImage: "url('" + { buku1 } + "')"
+// };
+
+// var img_buku2 = {
+// 	backgroundImage: "url('" + { buku2 } + "')"
+// };
+
+// var img_buku3 = {
+// 	backgroundImage: "url('" + { buku3 } + "')"
+// };
+
+// var img_buku4 = {
+// 	backgroundImage: "url('" + { buku4 } + "')"
+// };
   // return (
   //   <div className="App">
   //     <Header />
@@ -32,6 +35,25 @@ var img_buku4 = {
   //   </div>
   // );
 function App() {
+
+  const [books, setBooks] = useState([])
+
+  async function fetchData() {
+    const request = await axios.get('http://localhost:8081/books',{
+      headers: {
+        Authorization: 'Bearer ' + token //the token is a variable which holds the token
+      }
+    })
+    const data = request.data
+    setBooks(data)
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+
+  console.log(books)
   return (
     <React.Fragment>
     <div className="jumbotron text-center bg-resit-image" style={{marginBottom:"0",marginTop: "86px"}}>
@@ -113,6 +135,7 @@ function App() {
       <div className="col-12 text-center judul text-danger" style={{margin: "25px 0"}}>
         <i className="fa fa-fire"></i> Hot Books
       </div>
+<<<<<<< HEAD
       <div className="col-lg-3 col-md-4 col-6 resit-master-box">
         <div className="resit-box-produk">
           <div className="dropdown resit-box-dropdown show">
@@ -236,6 +259,13 @@ function App() {
       <div className="col-lg-3 col-md-4 col-6 resit-master-box">
         <div className="resit-box-produk">
           <div className="dropdown resit-box-dropdown show">
+=======
+      <Card todos={books}/>
+
+      {/* <div class="col-lg-3 col-md-4 col-6 resit-master-box">
+        <div class="resit-box-produk">
+          <div class="dropdown resit-box-dropdown show">
+>>>>>>> e1576675097cb4273a34d3ee63a3fe05fec7e61e
             <a data-toggle="dropdown" href="#" aria-expanded="false">
               <span className="fa fa-gear"></span>
             </a>
@@ -304,9 +334,15 @@ function App() {
             </div>
           </a>
         </div>
+<<<<<<< HEAD
       </div>
       <div className="col-12 text-center">
         <button className="btn btn-warning">Kampret</button>
+=======
+      </div> */}
+      <div class="col-12 text-center">
+        <button class="btn btn-warning">Kampret</button>
+>>>>>>> e1576675097cb4273a34d3ee63a3fe05fec7e61e
       </div>
     </div>
   </div>
