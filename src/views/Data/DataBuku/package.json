@@ -1,0 +1,6 @@
+{
+  "name": "DataBuku",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./DataBuku.js"
+}
