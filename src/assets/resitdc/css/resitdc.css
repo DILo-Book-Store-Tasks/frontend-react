@@ -120,6 +120,21 @@
       border-radius: 50%;
       /*height: 70%;*/
     }
+    .resit-navbar{
+      margin-top: 25px;
+    }
+    .text-black{
+      color: #000;
+    }
+    .judul-bb{
+      font-weight: bold;
+      display: block;
+      font-size: 22px;
+      padding: 5px 12px 5px 0;
+      border-bottom: 1px solid black;
+      margin: 25px 0;
+      display: inline-block;
+    }
     .judul{
       font-weight: bold;
       display: block;
