@@ -12,6 +12,7 @@ const LoginPage = () => {
       password,
     })
     window.localStorage.setItem('userData', JSON.stringify(request.data))
+    window.location = "http://localhost:3000/#/home";
   }
 
   return (

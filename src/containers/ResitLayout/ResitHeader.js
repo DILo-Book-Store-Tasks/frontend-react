@@ -29,7 +29,7 @@ const ResitHeader = props => {
                 <div className="collapse navbar-collapse navbar-resit" id="navbarSupportedContent">
                 <ul className="navbar-nav ml-auto topnav">
                     <li className="nav-item">
-                        <NavLink to="/home" className="nav-link">Home</NavLink>
+                        <NavLink to="/home" className="nav-link"></NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink to="/list-buku" className="nav-link">Buku</NavLink>
