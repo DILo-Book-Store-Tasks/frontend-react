@@ -3,8 +3,11 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import App from "./App";
-import * as serviceWorker from "./serviceWorker";
 
+import "@fortawesome/fontawesome-svg-core";
+
+
+import * as serviceWorker from "./serviceWorker";
 
 // import 'react-app-polyfill/ie9'; // For IE 9-11 support
 // import 'react-app-polyfill/stable';
@@ -17,4 +20,3 @@ ReactDOM.render(<App />, document.getElementById("root"));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
-

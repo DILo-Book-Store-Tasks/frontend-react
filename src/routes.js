@@ -5,9 +5,9 @@ const ListBuku = React.lazy(() => import('./views/ListBuku'));
 const Keranjang = React.lazy(() => import('./views/Keranjang'));
 const DetailBuku = React.lazy(() => import('./views/DetailBuku'));
 const Transaksi = React.lazy(() => import('./views/Transaksi'));
-const DataBuku = React.lazy(() => import('./views/Data/DataBuku/DataBuku'));
-const DataTransaksi = React.lazy(() => import('./views/Data/DataTransaksi'));
-const DataUser = React.lazy(() => import('./views/Data/DataUser'));
+// const DataBuku = React.lazy(() => import('./views/Data/DataBuku/DataBuku'));
+// const DataTransaksi = React.lazy(() => import('./views/Data/DataTransaksi'));
+// const DataUser = React.lazy(() => import('./views/Data/DataUser'));
 const TentangKami = React.lazy(() => import('./views/TentangKami'));
 const SyaratDanKetentuan = React.lazy(() => import('./views/SKK'));
 
