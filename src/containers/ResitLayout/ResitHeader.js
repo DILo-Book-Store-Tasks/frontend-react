@@ -66,6 +66,11 @@ const ResitHeader = props => {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink to="/keranjang" className="nav-link">
+                Keranjang
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink to="/login" className="btn-resit btn-resit-login">
                 Masuk
               </NavLink>
