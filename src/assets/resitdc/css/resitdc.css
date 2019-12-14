@@ -447,3 +447,9 @@ a:hover {
 .resit-outline-size-20 {
   border-width: 20px;
 }
+.resit-btn-navbar{
+  padding-left: 17px;
+  padding-right: 17px;
+  font-weight: bold;
+  background-color: #FFF;
+}

@@ -66,12 +66,12 @@ const ResitHeader = props => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/login" className="btn-resit btn-resit-login">
+              <NavLink to="/login" className="btn resit-radius-2 resit-btn-navbar btn-outline-info resit-outline-size-2">
                 Masuk
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/register" className="btn-resit btn-resit-register">
+              <NavLink to="/register" className="btn resit-radius-2 resit-btn-navbar btn-outline-info resit-outline-size-2">
                 Daftar
               </NavLink>
             </li>
