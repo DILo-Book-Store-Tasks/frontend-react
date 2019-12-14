@@ -18,11 +18,7 @@ const ResitHeader = props => {
         <a className="navbar-brand visible" href="#">
           <img src={NavBrand} className="logo" alt="" />
         </a>
-        <form
-          className="form-inline"
-          id="book-search"
-          action="/action_page.php"
-        >
+        <form className="form-inline" id="book-search">
           <input
             className="form-control mr-sm-2"
             id="input-search"
@@ -66,7 +62,12 @@ const ResitHeader = props => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/login" className="btn resit-radius-2 resit-btn-navbar btn-outline-info resit-outline-size-2">
+              <NavLink to="/keranjang" className="nav-link">
+                Keranjang
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/login" className="btn-resit btn-resit-login">
                 Masuk
               </NavLink>
             </li>
