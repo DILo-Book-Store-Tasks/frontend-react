@@ -33,7 +33,11 @@ export default class Login extends Component {
             onChange={e => setPassword(e.target.value)}
           />
           <br />
-          <button type="submit" className="btn btn-primary" onClick={handleLogin}>
+          <button
+            type="submit"
+            className="btn btn-primary"
+            onClick={handleLogin}
+          >
             Login
           </button>
         </div>
