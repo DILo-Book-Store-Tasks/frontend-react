@@ -9,9 +9,11 @@ const defaultProps = {};
 
 const ResitFooter = props => {
   return (
-    <div className="jumbotron text-center" style={{ marginBottom: "0" }}>
-      <p>Footer</p>
-    </div>
+    <footer class="page-footer font-small blue bg-info" style={{marginTop:"20px",fontWeight:"bold",color:"#FFF"}}>
+      <div class="footer-copyright text-center py-3">© 2019 Copyright
+        <a href="https://youtube.com/c/RestuDwiCahyo" style={{color:"#FFF"}}> Book Town</a>
+      </div>
+    </footer>
   );
 };
 

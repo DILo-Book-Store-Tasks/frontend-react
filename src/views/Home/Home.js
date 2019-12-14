@@ -1,40 +1,22 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
-
-import buku1 from "../../assets/images/produk/buku1.jpeg";
-// import buku2 from "../../assets/images/produk/buku2.jpg";
-// import buku3 from "../../assets/images/produk/buku3.jpg";
-// import buku4 from "../../assets/images/produk/buku4.jpg";
-// import banner from "../../assets/images/banner1.png";
-
+import banner from "../../assets/images/banner1.png";
 let img_banner = {
-  backgroundImage: "url('/static/media/banner1.208ab1ae.png')"
+	backgroundImage: `url(${banner})`
 };
-
-let img_buku1 = {
-  backgroundImage: "url('" + { buku1 } + "')"
-};
-
-// let img_buku2 = {
-//   backgroundImage: "url('" + { buku2 } + "')"
-// };
-
-// let img_buku3 = {
-//   backgroundImage: "url('" + { buku3 } + "')"
-// };
-
-// let img_buku4 = {
-//   backgroundImage: "url('" + { buku4 } + "')"
-// };
+function CoverBook(url){
+  let cover = {
+    backgroundImage: `url('http://localhost:8081/${url}')`
+  };
+  return cover;
+}
 function formatNumber(num) {
   return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 }
-
 const Home = props => {
-  // const books = props.books
   const [books, setBooks] = useState([]);
-
   const userData = window.localStorage.getItem("userData")
     ? JSON.parse(window.localStorage.getItem("userData"))
     : {};
@@ -67,21 +49,21 @@ const Home = props => {
         </div>
       </div>
       <div className="container">
-        <div className="resit-slogan row">
+        <div className="resit-slogan row mt-4">
           <div className="col-4 text-center">
             <div className="bg-info resit-box">
               <i className="fa fa-book fa-5x"></i>
             </div>
-            <div className="judul">Judul 1</div>
+            <div className="judul">Toko Buku Terlengkap</div>
             <div className="sub-judul">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             </div>
           </div>
           <div className="col-4 text-center">
             <div className="bg-info resit-box">
-              <i className="fa fa-shopping-cart fa-5x"></i>
+              <i className="fa fa-map fa-5x"></i>
             </div>
-            <div className="judul">Judul 2</div>
+            <div className="judul">Selalu Diskon</div>
             <div className="sub-judul">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             </div>
@@ -90,7 +72,7 @@ const Home = props => {
             <div className="bg-info resit-box">
               <i className="fa fa-money-bill fa-5x"></i>
             </div>
-            <div className="judul">Judul 3</div>
+            <div className="judul">Harga Termurah</div>
             <div className="sub-judul">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             </div>
@@ -110,33 +92,12 @@ const Home = props => {
               key={index}
             >
               <div className="resit-box-produk">
-                <div className="dropdown resit-box-dropdown show">
-                  <a data-toggle="dropdown" href="#" aria-expanded="false">
-                    <span className="fa fa-gear"></span>
-                  </a>
-                  <div
-                    className="dropdown-menu resit-box-dropdown-menu"
-                    x-placement="top-start"
-                  >
-                    <a
-                      className="dropdown-item"
-                      tabIndex="-1"
-                      href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112"
-                    >
-                      Edit
-                    </a>
-                    <a
-                      className="dropdown-item"
-                      tabIndex="-1"
-                      href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112"
-                    >
-                      Hapus
-                    </a>
-                  </div>
-                </div>
-                <a href="#" target="_self">
+                <Link to="/register" target="_self">
                   <div className="resit-produk">
-                    <div className="resit-foto" style={img_buku1}></div>
+                    {
+                      
+                    }
+                    <div className="resit-foto" style={CoverBook(book.cover)}></div>
                     <div className="resit-nama-produk">
                       {book.book_name}
                       {/* <h6>{book.author}</h6> */}
@@ -151,204 +112,12 @@ const Home = props => {
                       Stok : {book.qty}{" "}
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
-          {/* <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-          <div className="resit-box-produk">
-            <div className="dropdown resit-box-dropdown show">
-              <a data-toggle="dropdown" href="#" aria-expanded="false">
-                <span className="fa fa-gear"></span>
-              </a>
-              <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-              </div>
-            </div>
-            <a href="#" target="_self">
-              <div className="resit-produk">
-                <div className="resit-foto" style={img_buku1}>
-                </div>
-                <div className="resit-nama-produk">Dilan 1990</div>
-                <div className="resit-harga-produk">
-                  <span className="resit-harga">Rp. 220.000</span>
-                </div>
-                <div className="resit-produk-terjual"> Terjual : 52 </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-          <div className="resit-box-produk">
-            <div className="dropdown resit-box-dropdown show">
-              <a data-toggle="dropdown" href="#" aria-expanded="false">
-                <span className="fa fa-gear"></span>
-              </a>
-              <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-              </div>
-            </div>
-            <a href="#" target="_self">
-              <div className="resit-produk">
-                <div className="resit-foto" style={img_buku2}>
-                </div>
-                <div className="resit-nama-produk">Milea - Suara dari Dilan</div>
-                <div className="resit-harga-produk">
-                  <span className="resit-harga">Rp. 250.000</span>
-                </div>
-                <div className="resit-produk-terjual"> Terjual : 52 </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-          <div className="resit-box-produk">
-            <div className="dropdown resit-box-dropdown show">
-              <a data-toggle="dropdown" href="#" aria-expanded="false">
-                <span className="fa fa-gear"></span>
-              </a>
-              <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-              </div>
-            </div>
-            <a href="#" target="_self">
-              <div className="resit-produk">
-                <div className="resit-foto" style={img_buku3}>
-                </div>
-                <div className="resit-nama-produk">One Piece Blue Deep</div>
-                <div className="resit-harga-produk">
-                  <span className="resit-harga">Rp. 250.000</span>
-                </div>
-                <div className="resit-produk-terjual"> Terjual : 52 </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-          <div className="resit-box-produk">
-            <div className="dropdown resit-box-dropdown show">
-              <a data-toggle="dropdown" href="#" aria-expanded="false">
-                <span className="fa fa-gear"></span>
-              </a>
-              <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-              </div>
-            </div>
-            <a href="#" target="_self">
-              <div className="resit-produk">
-                <div className="resit-foto" style={img_buku4}>
-                </div>
-                <div className="resit-nama-produk">Bill Gates - Biacara Soal Restu, Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu</div>
-                <div className="resit-harga-produk">
-                  <span className="resit-harga">Rp. 250.000</span>
-                </div>
-                <div className="resit-produk-terjual"> Terjual : 52 </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-          <div className="resit-box-produk">
-            <div className="dropdown resit-box-dropdown show">
-              <a data-toggle="dropdown" href="#" aria-expanded="false">
-                <span className="fa fa-gear"></span>
-              </a>
-              <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-              </div>
-            </div>
-            <a href="#" target="_self">
-              <div className="resit-produk">
-                <div className="resit-foto" style={img_buku1}>
-                </div>
-                <div className="resit-nama-produk">Dilan 1990</div>
-                <div className="resit-harga-produk">
-                  <span className="resit-harga">Rp. 220.000</span>
-                </div>
-                <div className="resit-produk-terjual"> Terjual : 52 </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-          <div className="resit-box-produk">
-            <div className="dropdown resit-box-dropdown show">
-              <a data-toggle="dropdown" href="#" aria-expanded="false">
-                <span className="fa fa-gear"></span>
-              </a>
-              <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-              </div>
-            </div>
-            <a href="#" target="_self">
-              <div className="resit-produk">
-                <div className="resit-foto" style={img_buku2}>
-                </div>
-                <div className="resit-nama-produk">Milea - Suara dari Dilan</div>
-                <div className="resit-harga-produk">
-                  <span className="resit-harga">Rp. 250.000</span>
-                </div>
-                <div className="resit-produk-terjual"> Terjual : 52 </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-          <div className="resit-box-produk">
-            <div className="dropdown resit-box-dropdown show">
-              <a data-toggle="dropdown" href="#" aria-expanded="false">
-                <span className="fa fa-gear"></span>
-              </a>
-              <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-              </div>
-            </div>
-            <a href="#" target="_self">
-              <div className="resit-produk">
-                <div className="resit-foto" style={img_buku3}>
-                </div>
-                <div className="resit-nama-produk">One Piece Blue Deep</div>
-                <div className="resit-harga-produk">
-                  <span className="resit-harga">Rp. 250.000</span>
-                </div>
-                <div className="resit-produk-terjual"> Terjual : 52 </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="col-lg-3 col-md-4 col-6 resit-master-box">
-          <div className="resit-box-produk">
-            <div className="dropdown resit-box-dropdown show">
-              <a data-toggle="dropdown" href="#" aria-expanded="false">
-                <span className="fa fa-gear"></span>
-              </a>
-              <div className="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
-                <a className="dropdown-item" tabIndex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
-              </div>
-            </div>
-            <a href="#" target="_self">
-              <div className="resit-produk">
-                <div className="resit-foto" style={img_buku4}>
-                </div>
-                <div className="resit-nama-produk">Bill Gates - Biacara Soal Restu, Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu</div>
-                <div className="resit-harga-produk">
-                  <span className="resit-harga">Rp. 250.000</span>
-                </div>
-                <div className="resit-produk-terjual"> Terjual : 52 </div>
-              </div>
-            </a>
-          </div>
-        </div> */}
           <div className="col-12 text-center">
-            <button className="btn btn-warning">Kampret</button>
+            <button className="btn btn-outline-info resit-radius-2 resit-outline-size-2" style={{fontWeight:"bold"}}>Lihat Semua Buku</button>
           </div>
         </div>
       </div>

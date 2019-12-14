@@ -3,6 +3,13 @@ import { HashRouter, Route, Switch } from "react-router-dom";
 // import { renderRoutes } from 'react-router-config';
 // import './App.css';
 import "./assets/resitdc/css/resitdc.css";
+
+import "./assets/font-awesome/css/all.min.css";
+import "./assets/font-awesome/css/brands.min.css";
+import "./assets/font-awesome/css/fontawesome.min.css";
+import "./assets/font-awesome/css/regular.min.css";
+import "./assets/font-awesome/css/solid.min.css";
+
 require("dotenv").config();
 const loading = () => (
   <center style={{ marginTop: "250px" }}>
@@ -11,7 +18,7 @@ const loading = () => (
 );
 
 const ResitLayout = React.lazy(() => import("./containers/ResitLayout"));
-const Login = React.lazy(() => import("./views/MultiPage/Login"));
+const Login = React.lazy(() => import("./views/MultiPage/Login/Login"));
 const Register = React.lazy(() => import("./views/MultiPage/Register"));
 class App extends Component {
   render() {

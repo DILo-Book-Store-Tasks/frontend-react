@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../../assets/resitdc/css/resitdc-single-page.css";
 import brand from "../../../assets/images/logo.png";
-// import banner_login from "../../../assets/images/login_banner.png";
+import banner_login from "../../../assets/images/login_banner.png";
 let banner_login_image = {
-  backgroundImage: "url('/static/media/login_banner.83ce22a5.png')"
+	backgroundImage: `url(${banner_login})`
 };
+console.log(banner_login_image);
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

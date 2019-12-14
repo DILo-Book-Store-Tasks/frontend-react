@@ -29,9 +29,6 @@ const ResitHeader = props => {
             <i className="fa fa-search"></i>
           </button>
         </form>
-        <a href="" className="resit-cart">
-          <i className="fa fa-shopping-cart"></i>
-        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -49,7 +46,14 @@ const ResitHeader = props => {
         >
           <ul className="navbar-nav ml-auto topnav">
             <li className="nav-item">
-              <NavLink to="/home" className="nav-link"></NavLink>
+              <NavLink to="/keranjang" className="nav-link text-info">
+                <i className="fa fa-shopping-cart"></i>
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/home" className="nav-link">
+                Home
+              </NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/list-buku" className="nav-link">
@@ -57,22 +61,18 @@ const ResitHeader = props => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/tentang-kami" className="nav-link">
-                Tentang Kami
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/keranjang" className="nav-link">
-                Keranjang
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/login" className="btn-resit btn-resit-login">
+              <NavLink
+                to="/login"
+                className="btn resit-radius-2 resit-btn-navbar btn-outline-info resit-outline-size-2"
+              >
                 Masuk
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/register" className="btn resit-radius-2 resit-btn-navbar btn-outline-info resit-outline-size-2">
+              <NavLink
+                to="/register"
+                className="btn resit-radius-2 resit-btn-navbar btn-outline-info resit-outline-size-2"
+              >
                 Daftar
               </NavLink>
             </li>
