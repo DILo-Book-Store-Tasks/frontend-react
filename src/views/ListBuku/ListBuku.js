@@ -11,6 +11,13 @@ let img_buku1 = {
   backgroundImage: "url('" + { buku1 } + "')"
 };
 
+const userData = window.localStorage.getItem("userData")
+    ? JSON.parse(window.localStorage.getItem("userData"))
+    : {};
+
+    // console.log(userData.user._id)
+
+
 // let img_buku2 = {
 // 	backgroundImage: "url('" + { buku2 } + "')"
 // };
@@ -22,6 +29,14 @@ let img_buku1 = {
 // let img_buku4 = {
 // 	backgroundImage: "url('" + { buku4 } + "')"
 // };
+
+const addKeranjang = async id => {
+  console.log(id)
+  await axios.post('http://localhost:8081/orders', {
+    user : userData.user._id,
+    book: id,
+  })
+}
 function formatNumber(num) {
   return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 }
@@ -49,33 +64,33 @@ const LoginPage = props => {
   }, []);
   return (
     <React.Fragment>
-      <div class="container" style={{ marginTop: "90px" }}>
-        <div class="text-left">
-          <div class="judul-bb text-danger">
-            <span class="text-black">Keyword :</span> Hot Books
+      <div className="container" style={{ marginTop: "90px" }}>
+        <div className="text-left">
+          <div className="judul-bb text-danger">
+            <span className="text-black">Keyword :</span> Hot Books
           </div>
         </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="bg-info resit-filter-bar">
+        <div className="row">
+          <div className="col-12">
+            <div className="bg-info resit-filter-bar">
               Urutkan
-              <button class="btn btn-warning btn-sm">Terbaru</button>
-              <button class="btn btn-warning btn-sm">Terlaris</button>
+              <button className="btn btn-warning btn-sm">Terbaru</button>
+              <button className="btn btn-warning btn-sm">Terlaris</button>
             </div>
           </div>
-          <div class="col-3">
-            <div class="resit-judul-filter">Rentang Harga</div>
+          <div className="col-3">
+            <div className="resit-judul-filter">Rentang Harga</div>
             <input
               type="text"
               name=""
-              class="form-control"
+              className="form-control"
               placeholder="Min"
               style={{ marginBottom: "10px" }}
             />
             <input
               type="text"
               name=""
-              class="form-control"
+              className="form-control"
               placeholder="Max"
               style={{ marginBottom: "10px" }}
             />
@@ -126,6 +141,9 @@ const LoginPage = props => {
                             Rp.{formatNumber(book.price)}
                           </span>
                         </div>
+                        <a onClick={() => addKeranjang(book._id)}>
+                          Tambah Keranjang
+                        </a>
                         <div className="resit-produk-terjual">
                           {" "}
                           Stok : {book.qty}{" "}

@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+function formatNumber(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+}
+
 const Keranjang = props => {
 
   const [orders, setOrders] = useState([]);
@@ -8,29 +12,33 @@ const Keranjang = props => {
   const userData = window.localStorage.getItem("userData")
     ? JSON.parse(window.localStorage.getItem("userData"))
     : {};
-    // var user = "5def5358fc0c743746a917ac"
     var user = userData.user._id
-    console.log(user)
-
-    console.log(userData.token)
-  axios.defaults.headers = {
-    "Content-Type": "application/json",
-    Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGVmNTM1OGZjMGM3NDM3NDZhOTE3YWMiLCJyb2xlIjoiNWRlZjRmZmE4YWZjY2YyZmUzMWY1NjRkIiwiaWF0IjoxNTc2MjQ1Nzc3fQ.WxT_9ex8c2JY-Ege-2J2cQ5tqT_TM7BMSbc0DCh5KcM`
-    // Authorization: `Bearer ${userData.token}`
-  };
-
-  async function fetchData() {
-    const request = await axios.get("http://localhost:8081/orders",{
-    user
-    });
+    async function fetchData() {
+      const request = await axios({
+        method: 'post',
+        url: 'http://localhost:8081/orders_data',
+        responseType: 'stream',
+        headers: {
+          "Content-Type": "application/json",
+          'Accept' : 'application/json',
+          'Authorization' : 'Bearer ' + userData.token
+        },
+        data: {
+          user: user,
+        }
+      })
     const data = request.data;
-    setOrders(data);
+    // setOrders('');
+    setOrders(data.message.orders[0].order.books);
   }
 
   useEffect(() => {
     fetchData();
   }, []);
-
+  var total = 0;
+  orders.map((order, index) => {
+      total += parseInt(order.book.price) 
+  });
 
   console.log(orders)
   return (
@@ -49,16 +57,19 @@ const Keranjang = props => {
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>The Lords of The Wings</td>
-      <td>100.000</td>
+
+    {orders.map((order, index) => (
+      <tr key={index}>
+      <th scope="row"></th>
+      <td>{order.book.book_name}</td>
+      <td>{formatNumber(order.book.price)}</td>
       <td>1</td>
-      <td>100.000</td>
+    <td>{formatNumber(order.book.price)}</td>
     </tr>
+    ))}
     <tr>
       <td scope="row" colSpan="4">Total</td>
-      <td>100.000</td>
+    <td>Rp. {formatNumber(total)}</td>
     </tr>
   </tbody>
 </table>
