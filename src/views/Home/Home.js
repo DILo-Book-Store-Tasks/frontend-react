@@ -117,7 +117,9 @@ const Home = props => {
             </div>
           ))}
           <div className="col-12 text-center">
-            <button className="btn btn-outline-info resit-radius-2 resit-outline-size-2" style={{fontWeight:"bold"}}>Lihat Semua Buku</button>
+            <Link to="/list-buku">
+              <button className="btn btn-outline-info resit-radius-2 resit-outline-size-2" style={{fontWeight:"bold"}}>Lihat Semua Buku</button>
+            </Link>
           </div>
         </div>
       </div>

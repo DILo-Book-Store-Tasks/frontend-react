@@ -10,6 +10,7 @@ const Transaksi = React.lazy(() => import('./views/Transaksi'));
 // const DataUser = React.lazy(() => import('./views/Data/DataUser'));
 const TentangKami = React.lazy(() => import('./views/TentangKami'));
 const SyaratDanKetentuan = React.lazy(() => import('./views/SKK'));
+const Dashboard = React.lazy(() => import('./views/DashboardExample'));
 
 const routes = [
   { path: '/', exact: true, name: 'Halaman Utama' },
@@ -20,6 +21,7 @@ const routes = [
   { path: '/keranjang', name: 'Keranjang', component: Keranjang },
   { path: '/buku', name: 'Detail Buku', component: DetailBuku },
   { path: '/transaksi', name: 'Transaksi', component: Transaksi },
+  { path: '/contoh-dashboard', name: 'Dashboard', component: Dashboard },
 //   { path: '/data-buku', name: 'Data Buku', component: DataBuku },
 //   { path: '/data-transaksi', name: 'Data Transaksi', component: DataTransaksi },
 //   { path: '/data-user', name: 'Data User', component: DataUser },

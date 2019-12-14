@@ -133,7 +133,13 @@ const LoginPage = props => {
               ))}
 
               <div class="col-12 text-center">
-                <button class="btn btn-warning">Kampret</button>
+                <button class="btn btn-outline-primary resit-outline-size-2 resit-radius-2 mr-2">Awal</button>
+                
+                <button class="btn btn-outline-primary resit-outline-size-2 resit-radius-2 mr-1 ml-1">1</button>
+                <button class="btn btn-outline-primary resit-outline-size-2 resit-radius-2 mr-1 ml-1">2</button>
+                <button class="btn btn-outline-primary resit-outline-size-2 resit-radius-2 mr-1 ml-1">3</button>
+
+                <button class="btn btn-outline-primary resit-outline-size-2 resit-radius-2 ml-2">Akhir</button>
               </div>
             </div>
           </div>
