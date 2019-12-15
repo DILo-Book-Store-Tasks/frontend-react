@@ -92,7 +92,7 @@ const Home = props => {
               key={index}
             >
               <div className="resit-box-produk">
-                <Link to="/register" target="_self">
+                <Link to={"/buku/"+book._id} target="_self">
                   <div className="resit-produk">
                     {
                       
