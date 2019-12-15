@@ -460,3 +460,37 @@ a:hover {
   font-weight: bold;
   background-color: #FFF;
 }
+.resit-shadow{
+  box-shadow: 1px 1px 7px rgba(0,0,0,0.2);
+}
+.resit-box-detail{
+  padding:0 10px;
+}
+.resit-judul-detail-buku{
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.resit-judul-detail{
+  font-size: 22px;
+  /*margin-bottom: -0px;*/
+}
+h3{
+  font-size: 23px;
+}
+hr{
+  margin: -15px 0;
+}
+.resit-author-detail{
+  font-size: 22px;
+}
+.resit-genre-detail{
+  font-size: 16px;
+}
+.resit-deskripsi-detail{
+  font-size: 20px;
+}
+.resit-harga-detail{
+  font-weight: bold;
+  /*color: #F00;*/
+}

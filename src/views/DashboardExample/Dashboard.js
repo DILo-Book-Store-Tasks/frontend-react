@@ -21,19 +21,19 @@ const Dashboard = props => {
           <ul className="list-unstyled components">
             <p>Main Menu</p>
             <li>
-              <a href="#">Dashboard</a>
+              <a href="#"><i class="fa fa-home"></i> Dashboard</a>
             </li>
             <li>
-              <a href="#">Data User</a>
+              <a href="#"><i class="fa fa-users"></i> Data User</a>
             </li>
             <li>
-              <a href="#">Data Buku</a>
+              <a href="#"><i class="fa fa-book"></i> Data Buku</a>
             </li>
             <li>
-              <a href="#">Data Kategori</a>
+              <a href="#"><i class="fa fa-list"></i> Data Kategori</a>
             </li>
             <li>
-              <a href="#">Transaksi</a>
+              <a href="#"><i class="fa fa-print"></i> Transaksi</a>
             </li>
           </ul>
         </nav>
