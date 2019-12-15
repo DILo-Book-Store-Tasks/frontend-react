@@ -119,9 +119,6 @@ const LoginPage = props => {
                             Rp.{formatNumber(book.price)}
                           </span>
                         </div>
-                        <a onClick={() => addKeranjang(book._id)}>
-                          Tambah Keranjang
-                        </a>
                         <div className="resit-produk-terjual">
                           {" "}
                           Stok : {book.qty}{" "}

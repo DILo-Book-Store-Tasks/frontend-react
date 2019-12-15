@@ -204,7 +204,8 @@ a:hover {
   border-radius: 0.75rem 0.75rem 0 0;
   padding: 4px;
 }
-.resit-box-produk .resit-foto {
+/* .resit-box-produk */
+ .resit-foto {
   padding-top: 100%;
   width: 100%;
   background-size: contain;

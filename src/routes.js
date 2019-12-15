@@ -19,7 +19,7 @@ const routes = [
   { path: '/tentang-kami', name: 'Tentang Kami', component: TentangKami },
   { path: '/skk', name: 'Tentang Kami', component: SyaratDanKetentuan },
   { path: '/keranjang', name: 'Keranjang', component: Keranjang },
-  { path: '/buku', name: 'Detail Buku', component: DetailBuku },
+  { path: '/buku/:id', exact: true, name: 'Detail Buku', component: DetailBuku },
   { path: '/transaksi', name: 'Transaksi', component: Transaksi },
   { path: '/contoh-dashboard', name: 'Dashboard', component: Dashboard },
 //   { path: '/data-buku', name: 'Data Buku', component: DataBuku },

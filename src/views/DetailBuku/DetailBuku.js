@@ -1,6 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
-const LoginPage = props => {
+function CoverBook(url){
+  let cover = {
+    backgroundImage: `url("http://localhost:8081/${url}")`
+  };
+  return cover;
+}
+function formatNumber(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+}
+const DetailBuku = props => {
+  const id_buku  = props.match.params.id
+
+  const [buku, setBuku] = useState([]);
+
+  async function fetchData() {
+    const request = await axios.get("http://localhost:8081/book/"+id_buku);
+    const data = request.data;
+    setBuku(data[0]);
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+console.log(buku.book_name);
   return (
     
   <div class="container" style={{marginTop:"120px"}}>
@@ -8,18 +33,18 @@ const LoginPage = props => {
     <div class="col-12 bg-light resit-shadow">
       <div class="row" style={{padding: "0 13px"}}>
         <div class="col-6" style={{padding: "0 10px"}}>
-            <div class="resit-foto resit-radius-1">
+            <div class="resit-foto resit-radius-1" style={CoverBook(buku.cover)}>
             </div>
         </div>
         <div class="col-6">
           <div style={{padding: "30px 0",fontSize: "25px"}}>
             <h3>Judul</h3>
-            <div class="resit-judul-detail">Majestic Hotel</div>
+            <div class="resit-judul-detail">{buku.book_name}</div>
           </div>
           <hr/>
           <div style={{padding: "30px 0",fontSize: "25px"}}>
             <h3>Author</h3>
-            <div class="resit-author-detail">Agatha Christy</div>
+            <div class="resit-author-detail">{buku.author}</div>
           </div>
           <hr/>
           <div style={{padding: "30px 0",fontSize: "25px"}}>
@@ -29,12 +54,12 @@ const LoginPage = props => {
           <hr/>
           <div style={{padding: "30px 0",fontSize: "25px"}}>
             <h3>Deskripsi</h3>
-            <div class="resit-deskripsi-detail">Poirot and Hastings are staying at a Cornish resort. Conversing with Magdala 'Nick' Buckley, Poirot believes that someone is out to kill her, confirmed when he finds a bullet that Nick had thought to be a wasp shooting past her head. Poirot explains his concern to Nick. Poirot suspects someone in Nick's inner circle. Nick's nearest living relative is a lawyer cousin, Charles Vyse, who arranged the re-mortgaging on End House for her to supply desperately needed funds. Her housekeeper is Ellen, and the lodge near End House is leased by Australians Mr and Mrs Croft. George Challenger has a soft spot for Nick. Nick's two closest friends are Freddie Rice, an abused wife, and Jim Lazarus, an art dealer in love with Freddie. When Nick had surgery six months earlier, the Crofts suggested she make a will.</div>
+            <div class="resit-deskripsi-detail">{buku.desc}</div>
           </div>
           <hr/>
           <div style={{padding: "30px 0",fontSize: "25px"}}>
             <h3>Harga</h3>
-            <div class="resit-harga-detail text-danger">Rp. 100.000</div>
+            <div class="resit-harga-detail text-danger">Rp. {buku.price}</div>
           </div>
           <hr/>
           <div style={{padding: "30px 0",fontSize: "25px"}} class="row mb-2">
@@ -53,4 +78,4 @@ const LoginPage = props => {
     );
 };
 
-export default LoginPage;
+export default DetailBuku;
