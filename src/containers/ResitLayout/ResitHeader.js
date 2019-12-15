@@ -11,20 +11,20 @@ const userData = window.localStorage.getItem("userData")
     ? JSON.parse(window.localStorage.getItem("userData"))
     : {};
 
-  async function logoutkeun(){
-    console.log("masuk")
-      await axios({
-      method: 'post',
-      url: 'http://localhost:8081/users/logout',
-      responseType: 'stream',
-      headers: {
-        "Content-Type": "application/json",
-        'Accept' : 'application/json',
-        'Authorization' : 'Bearer ' + userData.token
-      }
-    })
-    window.location = "http://localhost:3000/#/home";
-  }
+  // async function logoutkeun(){
+  //   console.log("masuk")
+  //     await axios({
+  //     method: 'post',
+  //     url: 'http://localhost:8081/users/logout',
+  //     responseType: 'stream',
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       'Accept' : 'application/json',
+  //       'Authorization' : 'Bearer ' + userData.token
+  //     }
+  //   })
+  //   window.location = "http://localhost:3000/#/home";
+  // }
 function navlogin(){
   var login = (
       <React.Fragment>
@@ -48,7 +48,6 @@ function navlogin(){
       );
     var logout = (<li className="nav-item">
         <Link
-          onClick={logoutkeun()}
           className="btn resit-radius-2 resit-btn-navbar btn-outline-info resit-outline-size-2"
         >
           Logout
