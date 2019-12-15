@@ -41,10 +41,7 @@ const Home = props => {
         <div className="slogan-right">
           <h1>Cari Buku Favorit Mu</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat..{" "}
+            Buku buku terbaik menjadi koleksi kami segera pilih sebelum kehabisan..{" "}
           </p>
         </div>
       </div>
@@ -56,7 +53,7 @@ const Home = props => {
             </div>
             <div className="judul">Toko Buku Terlengkap</div>
             <div className="sub-judul">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Berbagai genre dari banyak author yang terkenal semua lengkap ada.
             </div>
           </div>
           <div className="col-4 text-center">
@@ -65,7 +62,7 @@ const Home = props => {
             </div>
             <div className="judul">Selalu Diskon</div>
             <div className="sub-judul">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Dapatkan promo terbaik 12.12 hanya sampai 30 Desember 2019.
             </div>
           </div>
           <div className="col-4 text-center">
@@ -74,7 +71,7 @@ const Home = props => {
             </div>
             <div className="judul">Harga Termurah</div>
             <div className="sub-judul">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Harga terbaik dan untuk buku terbaik
             </div>
           </div>
         </div>
@@ -94,9 +91,6 @@ const Home = props => {
               <div className="resit-box-produk">
                 <Link to="/register" target="_self">
                   <div className="resit-produk">
-                    {
-                      
-                    }
                     <div className="resit-foto" style={CoverBook(book.cover)}></div>
                     <div className="resit-nama-produk">
                       {book.book_name}
