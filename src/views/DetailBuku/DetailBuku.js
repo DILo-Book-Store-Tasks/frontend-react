@@ -29,12 +29,7 @@ const LoginPage = props => {
           <hr/>
           <div style={{padding: "30px 0",fontSize: "25px"}}>
             <h3>Deskripsi</h3>
-            <div class="resit-deskripsi-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </div>
+            <div class="resit-deskripsi-detail">Poirot and Hastings are staying at a Cornish resort. Conversing with Magdala 'Nick' Buckley, Poirot believes that someone is out to kill her, confirmed when he finds a bullet that Nick had thought to be a wasp shooting past her head. Poirot explains his concern to Nick. Poirot suspects someone in Nick's inner circle. Nick's nearest living relative is a lawyer cousin, Charles Vyse, who arranged the re-mortgaging on End House for her to supply desperately needed funds. Her housekeeper is Ellen, and the lodge near End House is leased by Australians Mr and Mrs Croft. George Challenger has a soft spot for Nick. Nick's two closest friends are Freddie Rice, an abused wife, and Jim Lazarus, an art dealer in love with Freddie. When Nick had surgery six months earlier, the Crofts suggested she make a will.</div>
           </div>
           <hr/>
           <div style={{padding: "30px 0",fontSize: "25px"}}>
